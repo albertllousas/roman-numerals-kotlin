@@ -6,7 +6,8 @@ class RomanNumerals {
             return when (number) {
                 1 -> "I"
                 2 -> "II"
-                else -> "III"
+                3 -> "III"
+                else -> "IV"
             }
         }
     }
