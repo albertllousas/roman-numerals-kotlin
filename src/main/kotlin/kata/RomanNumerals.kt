@@ -4,12 +4,11 @@ class RomanNumerals {
     companion object {
         fun convert(number: Int): String {
             return when (number) {
-                1 -> "I"
-                2 -> "II"
-                3 -> "III"
+                in 1 .. 3 -> "I" + convert(number - 1)
                 4 -> "IV"
-                5 -> "V"
-                else -> "V" + convert(number - 5)
+                in 5..8 -> "V" + convert(number - 5)
+                9 -> "IX"
+                else -> ""
             }
         }
     }
