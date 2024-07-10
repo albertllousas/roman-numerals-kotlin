@@ -1,17 +1,20 @@
 package kata
 
 import io.kotest.matchers.shouldBe
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.DynamicTest.dynamicTest
+import org.junit.jupiter.api.TestFactory
 
 class RomanNumeralsTest {
 
-    @Test
-    fun `should convert 1 to 'I'`() {
-        RomanNumerals.convert(1) shouldBe "I"
-    }
-
-    @Test
-    fun `should convert 2 to 'II'`() {
-        RomanNumerals.convert(2) shouldBe "II"
-    }
+    @TestFactory
+    fun `should convert decimals to roman numerals`() =
+        listOf(
+            Pair(1, "I"),
+            Pair(2, "II"),
+            Pair(3, "III")
+        ).map { (decimal, expected) ->
+            dynamicTest("$decimal $expected") {
+                RomanNumerals.convert(decimal) shouldBe expected
+            }
+        }
 }
