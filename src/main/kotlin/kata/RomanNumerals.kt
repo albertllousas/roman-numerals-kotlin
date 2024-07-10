@@ -9,7 +9,7 @@ class RomanNumerals {
                 3 -> "III"
                 4 -> "IV"
                 5 -> "V"
-                else -> "VI"
+                else -> "V" + convert(number - 5)
             }
         }
     }
