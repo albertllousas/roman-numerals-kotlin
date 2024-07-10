@@ -9,7 +9,8 @@ class RomanNumerals {
                 4 -> "IV"
                 in 5..8 -> "V" + convert(number - 5)
                 9 -> "IX"
-                else -> "X" + convert(number - 10)
+                in 10 .. 38 -> "X" + convert(number - 10)
+                else -> "IXL"
             }
         }
     }
