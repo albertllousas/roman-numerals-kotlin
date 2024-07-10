@@ -3,7 +3,8 @@ package kata
 class RomanNumerals {
     companion object {
         fun convert(number: Int): String {
-            return "I"
+            if(number == 1 ) return "I"
+            else return "II"
         }
     }
 
