@@ -7,7 +7,9 @@ class RomanNumerals {
                 1 -> "I"
                 2 -> "II"
                 3 -> "III"
-                else -> "IV"
+                4 -> "IV"
+                5 -> "V"
+                else -> "VI"
             }
         }
     }
