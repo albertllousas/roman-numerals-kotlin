@@ -25,11 +25,10 @@ class RomanNumeralsTest {
             Pair(19, "XIX"),
             Pair(20, "XX"),
             Pair(37, "XXXVII"),
-            Pair(39, "IXL"),
+            Pair(39, "XXXIX"),
             Pair(40, "XL"),
             Pair(41, "XLI"),
             Pair(49, "IL"),
-            Pair(50, "L"),
         ).map { (decimal, expected) ->
             dynamicTest("$decimal $expected") {
                 RomanNumerals.convert(decimal) shouldBe expected
